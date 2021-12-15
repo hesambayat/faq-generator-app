@@ -1,0 +1,20 @@
+@import-normalize;
+
+html {
+  box-sizing: border-box;
+  background-color: var(--color-background);
+  scroll-behavior: smooth;
+  -ms-overflow-style: scrollbar;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  min-height: 100%;
+  margin: 0;
+  overflow-x: hidden;
+}

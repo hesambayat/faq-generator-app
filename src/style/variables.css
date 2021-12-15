@@ -1,0 +1,10 @@
+:root {
+  /* Colors */
+  --color-body: #3E322E;
+  --color-background: #DDDFD2;
+
+  /* Fonts */
+  --font-family: "Neue Machina", -apple-system, system-ui, "Helvetica Neue", Helvetica, "Segoe UI", Roboto, "Apple Color Emoji", "Segoe UI Emoji", sans-serif;
+  --font-weight-regular: 400;
+  --font-weight-bold: 700;
+}

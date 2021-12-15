@@ -1,0 +1,25 @@
+* {
+  cursor: url("../assets/images/cursor.svg"), auto;
+}
+
+a,
+button {
+  cursor: url("../assets/images/cursor-hand.svg"), auto;
+}
+
+button:disabled,
+button.disabled {
+  cursor: url("../assets/images/cursor-disabled.svg"), auto;
+}
+
+button:not(:disabled):not(.disabled):active {
+  cursor: url("../assets/images/cursor-hand.svg"), auto;
+}
+
+input {
+  cursor: url("../assets/images/cursor-edit.svg"), auto;
+}
+
+input:disabled {
+  cursor: url("../assets/images/cursor.svg"), auto;
+}
