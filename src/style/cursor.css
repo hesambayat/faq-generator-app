@@ -16,10 +16,12 @@ button:not(:disabled):not(.disabled):active {
   cursor: url("../assets/images/cursor-hand.svg"), auto;
 }
 
-input {
+input[type="text"],
+textarea {
   cursor: url("../assets/images/cursor-edit.svg"), auto;
 }
 
-input:disabled {
+input:disabled,
+textarea:disabled {
   cursor: url("../assets/images/cursor.svg"), auto;
 }
