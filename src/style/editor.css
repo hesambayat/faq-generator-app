@@ -1,0 +1,16 @@
+.ProseMirror > *.is-empty::before {
+  content: attr(data-placeholder);
+  float: left;
+  color: var(--color-body);
+  pointer-events: none;
+  height: 0;
+  opacity: 0.4;
+}
+
+.questions .editor:not(.editor--focused) .ProseMirror > p {
+  display: none;
+}
+
+.editor__menu button.is-active {
+  font-weight: bold;
+}

@@ -1,4 +1,7 @@
-import { Questions, NewQuestion } from '../layouts'
+import Questions from './Questions'
+import NewQuestion from './NewQuestion'
+import Footer from './Footer'
+
 const Dashboard = () => {
   return (
     <div className="dashboard">
@@ -10,8 +13,7 @@ const Dashboard = () => {
         <NewQuestion />
       </div>
       <div className="dashboard__footer">
-        <button>Cancel</button>
-        <button>Delete</button>
+        <Footer />
       </div>
     </div>
   )
