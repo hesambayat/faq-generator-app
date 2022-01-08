@@ -18,3 +18,10 @@ body {
   margin: 0;
   overflow-x: hidden;
 }
+
+*:focus {
+  outline-style: solid;
+  outline-width: 1px;
+  outline-offset: 0;
+  outline-color: var(--color-body--highlight);
+}

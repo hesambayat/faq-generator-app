@@ -3,17 +3,23 @@
 }
 
 a,
-button {
+button
+.button {
   cursor: url("../assets/images/cursor-hand.svg"), auto;
 }
 
 button:disabled,
-button.disabled {
+button.disabled,
+.button.disabled {
   cursor: url("../assets/images/cursor-disabled.svg"), auto;
 }
 
 button:not(:disabled):not(.disabled):active {
   cursor: url("../assets/images/cursor-hand.svg"), auto;
+}
+
+.footer .button {
+  cursor: url("../assets/images/cursor.svg"), auto !important;
 }
 
 input[type="text"],

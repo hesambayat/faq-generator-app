@@ -7,7 +7,7 @@ const Hint = (({ length }) => {
   , [length])
 
   return (
-    <p>Here you can find {count}. Feel free to create your own question :)</p>
+    <p className="questions__hint">Here you can find {count}. <br/>Feel free to create your own question :)</p>
   )
 })
 

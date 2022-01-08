@@ -24,7 +24,7 @@ const createQuestion = (data = {}) => ({
         'content': [
           {
             'type': 'text',
-            'text': 'Add your question and answer then click on the '
+            'text': 'Add your question and answer, then click on the '
           },
           {
             'type': 'text',
@@ -54,7 +54,21 @@ export function mockServer({ environment = 'development' } = {}) {
     environment,
     seeds(server) {
       server.db.loadData({
-        questions: [createQuestion()],
+        questions: [
+          createQuestion(),
+          // createQuestion({ id: nanoid() }),
+          // createQuestion({ id: nanoid() }),
+          // createQuestion({ id: nanoid() }),
+          // createQuestion({ id: nanoid() }),
+          // createQuestion({ id: nanoid() }),
+          // createQuestion({ id: nanoid() }),
+          // createQuestion({ id: nanoid() }),
+          // createQuestion({ id: nanoid() }),
+          // createQuestion({ id: nanoid() }),
+          // createQuestion({ id: nanoid() }),
+          // createQuestion({ id: nanoid() }),
+          // createQuestion({ id: nanoid() }),
+        ],
       })
     },
     routes() {

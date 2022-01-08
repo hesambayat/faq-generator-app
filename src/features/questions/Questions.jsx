@@ -2,8 +2,10 @@ import { useMemo } from 'react'
 import { useSelector } from 'react-redux'
 import { useGetQuestionsQuery } from '../../services/questions'
 import { selectSortAlgorithm } from '../../store/sort'
+import { Alert } from '../../components'
 import DeleteAll from './DeleteAll'
 import Hint from './Hint'
+import Info from './Info'
 import Question from './Question'
 import Sort from './Sort'
 
@@ -18,13 +20,24 @@ const Questions = () => {
 
   return (
     <div className="questions">
-      <h2>Questions</h2>
-      {questions.length > 1 && <Sort />}
-      {questions.length > 0 && <DeleteAll questions={questions} />}
+      <div className="questions__header">
+        <h2>
+          Questions
+          <Info>
+            Here you can find the <strong>created</strong> questions <br/>& their answers.
+          </Info>
+        </h2>
+        {questions.length > 0 && (
+          <div className="questions__header__actions">
+            {questions.length > 1 && <Sort />}
+            <DeleteAll questions={questions} />
+          </div>
+        )}
+      </div>
       <Hint length={questions.length} />
       {questions.length > 0 
         ? questions.map((item) => <Question key={item.id} item={item} />)
-        : <p>No questions yet</p>
+        : <Alert variant="info">No questions yet.</Alert>
       }
     </div>
   )

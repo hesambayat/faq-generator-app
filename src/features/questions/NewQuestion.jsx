@@ -1,7 +1,8 @@
 import { useCallback, useMemo, useState } from 'react'
 import { useAddQuestionMutation } from '../../services/questions'
-import { Editor } from '../../components'
+import { Button, Editor } from '../../components'
 import AddDelay from './AddDelay'
+import Info from './Info'
 
 const NewQuestion = () => {
   const [content, setContent] = useState()
@@ -9,7 +10,6 @@ const NewQuestion = () => {
   const canSubmit = useMemo(() => {
     return content?.fullText?.trim()?.length > 0
   }, [content])
-
   const handleSubmit = useCallback(async () => {
     if (canSubmit) {
       await addQuestion(content)
@@ -19,14 +19,25 @@ const NewQuestion = () => {
 
   return (
     <div className="new-question">
-      <h1>Create a new question</h1>
+      <div className="new-question__header">
+        <h3>
+          Create a new question 
+          <Info>
+            Here you can <strong>create</strong> new questions <br/>& their answers.
+          </Info>
+        </h3>
+      </div>
       <Editor menuId="new-question" content={content?.question} onChange={setContent} canEdit={!isLoading} />
       <p>{error}</p>
-      <AddDelay />
-      <button
-        onClick={handleSubmit}
-        disabled={!canSubmit || isLoading}
-      >Create question</button>
+      <div className="new-question__actions">
+        <AddDelay />
+        <Button
+          variant="primary"
+          disabled={!canSubmit || isLoading}
+          title={isLoading ? 'Saving…' : 'Add a question then submit.'}
+          onClick={handleSubmit}
+        >Create question</Button>
+      </div>
     </div>
   )
 }

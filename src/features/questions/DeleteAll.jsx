@@ -1,6 +1,7 @@
 import { useCallback } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { addAllToBin, selectAllFromBin } from '../../store/bin'
+import { Icon } from '../../components'
 
 const DeleteAll = ({ questions }) => {
   const dispatch = useDispatch()
@@ -11,7 +12,10 @@ const DeleteAll = ({ questions }) => {
   }, [dispatch, questions])
 
   return (
-    <button onClick={handleClick}>Delete all ({bin.length}/{questions.length})</button>
+    <Icon
+      icon={`bin${bin.length ? bin.length === questions.length ? '-added' : '-add' : ''}`}
+      onClick={handleClick}
+    />
   )
 }
 

@@ -1,6 +1,8 @@
 @font-face {
   font-family: 'Neue Machina';
-  src: url('../assets/fonts/PPNeueMachina-Regular.otf') format('opentype');
+  src: local('Neue Machina Regular'),
+       local('NeueMachina-Regular'),
+       url('../assets/fonts/NeueMachina-Regular.woff2') format('woff2');
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -8,8 +10,20 @@
 
 @font-face {
   font-family: 'Neue Machina';
-  src: url('../assets/fonts/PPNeueMachina-Ultrabold.otf') format('opentype');
+  src: local('Neue Machina Bold'),
+       local('NeueMachina-Bold'),
+       url('../assets/fonts/NeueMachina-Bold.woff2') format('woff2');
   font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Neue Machina';
+  src: local('Neue Machina Black'),
+       local('NeueMachina-Black'),
+       url('../assets/fonts/NeueMachina-Black.woff2') format('woff2');
+  font-weight: 900;
   font-style: normal;
   font-display: swap;
 }

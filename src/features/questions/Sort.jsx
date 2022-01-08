@@ -1,6 +1,7 @@
 import { useCallback } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { selectNextSort, toggleSort } from '../../store/sort'
+import { Icon } from '../../components'
 
 const Sort = () => {
   const dispatch = useDispatch()
@@ -8,7 +9,10 @@ const Sort = () => {
   const handleClick = useCallback(() => dispatch(toggleSort()), [dispatch])
 
   return (
-    <button onClick={handleClick}>Sort {sort}</button>
+    <Icon
+      icon={`sort-${sort.toLowerCase()}`}
+      onClick={handleClick}
+    />
   )
 }
 

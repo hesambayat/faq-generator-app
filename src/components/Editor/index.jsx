@@ -9,6 +9,11 @@ import MenuBar from './MenuBar'
 
 const CustomDocument = Document.extend({
   content: 'heading paragraph block*',
+  addKeyboardShortcuts() {
+    return {
+      'Mod-\\': () => this.editor.chain().focus().unsetAllMarks().clearNodes().run(),
+    }
+  }
 })
 
 const Editor = (props) => {
@@ -34,7 +39,7 @@ const Editor = (props) => {
             return 'Write your question here…'
           }
 
-          return editor.getJSON()?.content?.length < 3 ? 'A great short answer goes a long a way…' : ''
+          return editor.getJSON()?.content?.length < 3 ? 'A short answer goes a long way…' : ''
         },
       })
     ],

@@ -1,21 +1,22 @@
-import Questions from './Questions'
-import NewQuestion from './NewQuestion'
+import Logo from './Logo'
 import Footer from './Footer'
+import NewQuestion from './NewQuestion'
+import Questions from './Questions'
 
 const Dashboard = () => {
   return (
-    <div className="dashboard">
-      <div className="dashboard__header">
-        <p>FAQ</p>
-        <Questions />
+    <>
+      <div className="dashboard">
+        <div className="dashboard__header">
+          <Logo />
+          <Questions />
+        </div>
+        <div className="dashboard__main">
+          <NewQuestion />
+        </div>
       </div>
-      <div className="dashboard__main">
-        <NewQuestion />
-      </div>
-      <div className="dashboard__footer">
-        <Footer />
-      </div>
-    </div>
+      <Footer />
+    </>
   )
 }
 

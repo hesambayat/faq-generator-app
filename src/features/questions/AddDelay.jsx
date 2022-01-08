@@ -18,7 +18,7 @@ const AddDelay = () => {
   }, [checked])
 
   return (
-    <div className="form-group">
+    <div className="delay">
       <input
         id="mock"
         type="checkbox"
@@ -26,7 +26,9 @@ const AddDelay = () => {
         onChange={toggleDelay}
         checked={checked}
       />
-      <label htmlFor="mock">Add {COOKIE_VALUE/1000} seconds delay</label>
+      <label htmlFor="mock">
+        {`Add ${COOKIE_VALUE/1000} seconds delay`}
+      </label>
     </div>
   )
 }

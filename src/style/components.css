@@ -1,0 +1,205 @@
+/* Editor */
+.editor {
+  position: relative;
+}
+
+.editor__menu {
+  display: flex;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  flex-wrap: nowrap;
+}
+
+.editor__menu__marks {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.editor__menu__utilities {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.editor__menu button {
+  --size: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  width: var(--size);
+  height: var(--size);
+  margin-right: 0.375rem;
+  font-size: 1.25rem;
+  line-height: 1;
+  border: none;
+  border-radius: var(--border-radius);
+  background-color: transparent;
+  color: var(--color-body--alt);
+  transition: background-color 200ms;
+  will-change: color, background-color;
+  appearance: none;
+}
+
+.editor__menu button:hover {
+  background-color: var(--color-body--highlight);
+}
+
+.editor__menu button.is-active {
+  background-color: var(--color-body--alt);
+  color: var(--color-saturated);
+}
+
+.editor__menu button .i {
+  pointer-events: none;
+}
+
+.ProseMirror > h1:nth-child(1).is-empty::before,
+.ProseMirror > p:nth-child(2).is-empty::before {
+  content: attr(data-placeholder);
+  /* float: left; */
+  color: var(--color-body--alt);
+  pointer-events: none;
+  height: 0;
+}
+
+.ProseMirror > *:first-child {
+  margin-top: 0;
+}
+
+.ProseMirror > *:last-child {
+  margin-bottom: 0;
+}
+
+/* Alert */
+.alert {
+  display: flex;
+  margin: var(--spacing) 0;
+  padding: var(--spacing) calc(var(--spacing) * 1.2);
+  font-size: 1rem;
+  font-weight: var(--font-weight-bold);
+  line-height: 1.25rem;
+  border-radius: var(--border-radius);
+  /* background: linear-gradient(to right, rgba(21, 23, 10, 0.08) 0%, rgba(0, 0, 0, 0) 100%); */
+  background-color: var(--color-body--overlay);
+  color: var(--color-saturated);
+  animation: fadein 400ms ease-in-out;
+  will-change: opacity, transform;
+}
+
+/* Button Icon */
+.icon {
+  --size: 1.5rem;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: var(--size);
+  height: var(--size);
+  font-size: calc(var(--size) * 0.5);
+  border: none;
+  border-radius: var(--border-radius);
+  background: none;
+  appearance: none;
+}
+
+.icon,
+.icon:not(:disabled):not(.disabled):active {
+  cursor: inherit;
+}
+
+.icon .i {
+  pointer-events: none;
+}
+
+/* Button */
+.button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1.25rem 3.125rem;
+  font-size: 1.125rem;
+  font-weight: var(--font-weight-bold);
+  line-height: 1.625rem;
+  border: none;
+  border-radius: 0;
+  background-color: transparent;
+  color: var(--color-body);
+  transition: color 200ms, background-color 200ms;
+  will-change: color, background-color;
+  user-select: none;
+  appearance: none;
+}
+
+.button--primary {
+  border-radius: var(--border-radius);
+  background-color: var(--color-success);
+}
+
+.button--primary:disabled,
+.button--primary.disabled {
+  background-color: var(--color-body--highlight);
+}
+
+.button--secondary {
+  background-color: var(--color-body);
+  color: var(--color-background);
+}
+
+.button--secondary:disabled,
+.button--secondary.disabled {
+  background-color: var(--color-body--highlight);
+}
+
+.button:disabled,
+.button.disabled {
+  color: var(--color-body--alt);
+}
+
+.button:focus {
+  outline: none;
+  opacity: 0.85;
+}
+
+.button:disabled:focus,
+.button.disabled:focus {
+  opacity: 1;
+}
+
+/* Tooltip */
+.tooltip {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  font-size: 0.625rem;
+  font-weight: var(--font-weight-bold);
+  line-height: 1rem;
+  padding: 0.5rem 0.5rem 0.375rem;
+  border-radius: 2px;
+  background-color: var(--color-body);
+  color: var(--color-saturated);
+  transform: translateY(calc(-100% - 0.3125rem));
+  white-space: nowrap;
+  opacity: 0;
+  animation: fadein 200ms 200ms both;
+  pointer-events: none;
+  z-index: 999;
+}
+
+.tooltip--delayed {
+  animation-delay: 800ms;
+}
+
+.tooltip .shortcut {
+  color: var(--color-body--alt);
+  margin-left: 0.5em;
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

@@ -2,6 +2,7 @@ import { useCallback } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { useDeleteQuestionsMutation } from '../../services/questions'
 import { clearBin, selectAllFromBin } from '../../store/bin'
+import { Button } from '../../components'
 
 const Footer = () => {
   const dispatch = useDispatch()
@@ -14,7 +15,7 @@ const Footer = () => {
       restore()
     } catch (error) {
       // Handle error here
-      console.error(error)      
+      console.error(error)
     }
   }, [deleteQuestions, restore, bin])
 
@@ -23,10 +24,23 @@ const Footer = () => {
   }
 
   return (
-    <>
-      <button onClick={restore} disabled={isLoading}>Cancel</button>
-      <button onClick={emptyBin} disabled={isLoading}>Delete ({bin.length})</button>
-    </>
+    <div className="footer">
+      <div className="footer__container">
+        <div className="footer__row">
+          <div className="footer__actions">
+            <Button
+              disabled={isLoading}
+              onClick={restore}
+            >Cancel</Button>
+            <Button
+              variant="secondary"
+              disabled={isLoading}
+              onClick={emptyBin}
+            ><span>Delete <i>{bin.length}</i></span></Button>
+          </div>
+        </div>
+      </div>
+    </div>
   )
 
 }
