@@ -33,6 +33,18 @@
   padding-bottom: calc(var(--spacing) * 4);
   margin-right: calc(var(--spacing) * -1);
   margin-left: calc(var(--spacing) * -1);
+  visibility: hidden;
+  will-change: opacity;
+}
+
+.dashboard--loading {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.dashboard--ready {
+  visibility: visible;
+  animation: fadein 1200ms;
 }
 
 .dashboard__header {
@@ -200,8 +212,8 @@
   line-height: 1.125rem;
   border-radius: var(--border-radius);
   box-shadow: 0 0 0 1px var(--color-body--highlight);
-  transition: box-shadow 200ms;
-  will-change: min-height, padding-bottom, box-shadow;
+  transition: box-shadow 200ms, background-color 400ms;
+  will-change: min-height, padding-bottom, box-shadow, background-color;
 }
 
 .questions .ProseMirror:focus {
@@ -221,6 +233,7 @@
   padding-bottom: calc(var(--spacing) * 3);
   box-shadow: 0 0.5rem 1.875rem rgba(62, 50, 46, 0.1);
   min-height: 9.25rem;
+  background-color: var(--color-background);
 }
 
 .questions .ProseMirror > h1:first-child {
@@ -370,16 +383,10 @@ span.info {
   0% {
     background-color: var(--color-body--highlight);
   }
-  100% {
-    background-color: transparent;
-  }
 }
 
 @keyframes slidein {
   0% {
     transform: translateY(100%) scaleY(2);
-  }
-  100% {
-    transform: none;
   }
 }

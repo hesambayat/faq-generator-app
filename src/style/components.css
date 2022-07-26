@@ -165,6 +165,18 @@
   opacity: 1;
 }
 
+/* Gradient */
+.gradient {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--color-background);
+  pointer-events: none;
+  z-index: -1;
+}
+
 /* Tooltip */
 .tooltip {
   display: block;

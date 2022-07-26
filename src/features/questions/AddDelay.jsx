@@ -1,7 +1,7 @@
 import { useEffect, useCallback, useState } from 'react'
 
 const COOKIE_NAMESPACE = 'request:delay'
-const COOKIE_VALUE = '5000'
+const COOKIE_VALUE = '3000'
 
 const AddDelay = () => {
   const [checked, setChecked] = useState(window.localStorage.getItem(COOKIE_NAMESPACE) === COOKIE_VALUE)

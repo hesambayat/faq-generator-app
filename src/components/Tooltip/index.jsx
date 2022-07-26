@@ -6,7 +6,7 @@ const Tooltip = ({ children, title, displayOnClick = false, interactive = false 
   const ref = useRef(null)
   const [rect, setRect] = useState()
   const [style, setStyle] = useState(null)
-  const [coord, setCoord] = useState({ x: 0, y: 0 })
+  const [coord, setCoord] = useState({ x: -10000, y: -10000 })
   const classNames = useMemo(() => {
     const classNames = ['tooltip']
     if (!displayOnClick) classNames.push('tooltip--delayed')
