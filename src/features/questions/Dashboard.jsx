@@ -1,11 +1,11 @@
 import { useEffect, useMemo, useState } from 'react'
-import { Gradient } from '../../components'
+import { Shader } from '../../components'
 import Logo from './Logo'
 import Footer from './Footer'
 import NewQuestion from './NewQuestion'
 import Questions from './Questions'
 
-const MINIMUM_SPLASH_SCREEN_PERIOD = 3000
+const MINIMUM_SPLASH_SCREEN_PERIOD = 1000
 
 const Dashboard = () => {
   const [areFontsReady, setFontsReady] = useState(false)
@@ -26,7 +26,7 @@ const Dashboard = () => {
 
   return (
     <>
-      <Gradient />
+      <Shader />
       <div className={classNames}>
         <div className="dashboard__header">
           <Logo />
