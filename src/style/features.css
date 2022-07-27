@@ -20,7 +20,7 @@
   height: 0.875rem;
   margin-top: 0.35rem;
   margin-right: 0.5rem;
-  background-color: var(--color-logo);
+  background-color: #e608ff;
   border-radius: 50%;
   pointer-events: none;
 }
@@ -119,9 +119,16 @@
 
 .new-question .ProseMirror {
   padding: calc(var(--spacing) * 1.5) var(--spacing) calc(var(--spacing) * 4) calc(var(--spacing) * 1.2);
-  background-color: var(--color-saturated);
-  border-radius: var(--border-radius);
+  background-color: rgba(7, 0, 34, 0.99);
   min-height: max(21.875rem, (100vh - 21.875rem));
+  border-radius: var(--border-radius);
+}
+
+.new-question .editor {
+  padding: calc(var(--spacing) * 0.25);
+  background-image: linear-gradient(40deg, #e608ff, #332abd, #000031);
+  border-radius: calc(var(--border-radius) * 1.5);
+  will-change: background-image;
 }
 
 .new-question .ProseMirror:focus {
@@ -231,9 +238,9 @@
 
 .questions .editor--focused .ProseMirror {
   padding-bottom: calc(var(--spacing) * 3);
-  box-shadow: 0 0.5rem 1.875rem rgba(62, 50, 46, 0.1);
+  /* box-shadow: 0 0.5rem 1.875rem rgba(62, 50, 46, 0.1); */
   min-height: 9.25rem;
-  background-color: var(--color-background);
+  /* background-color: #090125; */
 }
 
 .questions .ProseMirror > h1:first-child {
@@ -358,13 +365,16 @@ span.info {
     padding-left: var(--spacing);
   }
 
+  .new-question .editor {
+    margin-left: calc(var(--spacing) * -2.5);
+  }
+
   .new-question .ProseMirror {
     padding: calc(var(--spacing) * 2) calc(var(--spacing) * 2) calc(var(--spacing) * 3);
-    margin-left: calc(var(--spacing) * -2);
   }
   
   .new-question .editor__menu {
-    left: calc(var(--spacing) * -0.4);
+    left: calc(var(--spacing) * 1.5);
   }
 
   .new-question__actions {

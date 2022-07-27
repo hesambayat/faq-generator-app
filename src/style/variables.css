@@ -1,14 +1,15 @@
 :root {
   /* Colors */
-  --color-body: #fff;
-  --color-body--alt: #94958F;
-  --color-body--highlight: #D2D3CB;
-  --color-body--overlay: rgba(62, 50, 46, 0.95);
+  --color-body: #cac8d9;
+  --color-body--alt: #576086;
+  --color-body--highlight: #2a3044;
+  --color-body--overlay: #ff0062;
   --color-background: #000;
-  --color-saturated: rgba(255, 255, 255, 0.1);
-  --color-alert: #E95050;
+  --color-saturated: #2a3044;
+  --color-accent: rgba(255, 255, 0, 1);
+  --color-primary: linear-gradient(40deg, #e608ff, #332abd);
+  --color-alert: #ff0062;
   --color-success: #4ED1B8;
-  --color-logo: #DE911B;
 
   /* Fonts */
   --font-family: "Neue Machina", -apple-system, system-ui, "Helvetica Neue", Helvetica, "Segoe UI", Roboto, "Apple Color Emoji", "Segoe UI Emoji", sans-serif;
