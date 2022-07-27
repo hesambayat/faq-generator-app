@@ -1,11 +1,11 @@
 :root {
   /* Colors */
-  --color-body: #3E322E;
+  --color-body: #fff;
   --color-body--alt: #94958F;
   --color-body--highlight: #D2D3CB;
   --color-body--overlay: rgba(62, 50, 46, 0.95);
-  --color-background: #DDDFD2;
-  --color-saturated: #EDEFE4;
+  --color-background: #000;
+  --color-saturated: rgba(255, 255, 255, 0.1);
   --color-alert: #E95050;
   --color-success: #4ED1B8;
   --color-logo: #DE911B;

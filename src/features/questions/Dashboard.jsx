@@ -26,7 +26,7 @@ const Dashboard = () => {
 
   return (
     <>
-      <Shader />
+      <Shader scene={isLoading ? 0 : 1} />
       <div className={classNames}>
         <div className="dashboard__header">
           <Logo />

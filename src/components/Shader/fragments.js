@@ -14,12 +14,12 @@ float map(vec3 p) {
 }
 
 void mainImage( out vec4 fragColor, in vec2 fragCoord ) {	
-	vec2 p = fragCoord.xy / iResolution.y - vec2(1.1, 0.55);
+	vec2 p = fragCoord.xy / iResolution.y - vec2(uPosition.x, uPosition.y);
   vec3 cl = vec3(0.7, 0.2, 1.0);
   float d = 5.0;
 
   for(int i = 0; i <= 4; i++)	{
-		vec3 p = vec3(0.0, 0.0, 5.0) + normalize(vec3(p, -0.8)) * d;
+		vec3 p = vec3(0.0, 0.0, 5.0) + normalize(vec3(p, uScale)) * d;
     float rz = map(p);
 		float f = clamp((rz - map(p + 0.1)) * 0.5, -0.1, 1.0);
     vec3 l = vec3(0.1, 0.2, 0.45) + vec3(5.0, 2.5, 3.0) * f;
