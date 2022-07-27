@@ -1,21 +1,25 @@
 {
   "files": {
-    "main.css": "/faq-generator-app/static/css/main.c114f772.css",
-    "main.js": "/faq-generator-app/static/js/main.e285ec94.js",
+    "main.css": "/faq-generator-app/static/css/main.1133d80c.css",
+    "main.js": "/faq-generator-app/static/js/main.3c6df50c.js",
     "static/js/787.024c9544.chunk.js": "/faq-generator-app/static/js/787.024c9544.chunk.js",
-    "static/media/PPNeueMachina-Ultrabold.otf": "/faq-generator-app/static/media/PPNeueMachina-Ultrabold.4739fc0703c02a47c10a.otf",
-    "static/media/PPNeueMachina-Regular.otf": "/faq-generator-app/static/media/PPNeueMachina-Regular.f5cfb7b73567980977e3.otf",
+    "static/media/NeueMachina-Black.woff2": "/faq-generator-app/static/media/NeueMachina-Black.a5d08d03e9e32b9c1224.woff2",
+    "static/media/NeueMachina-Regular.woff2": "/faq-generator-app/static/media/NeueMachina-Regular.2dabb3622c2ec78c26ea.woff2",
+    "static/media/NeueMachina-Bold.woff2": "/faq-generator-app/static/media/NeueMachina-Bold.d49ee994b16c7a8be96e.woff2",
+    "static/media/icons.svg": "/faq-generator-app/static/media/icons.fe9b1806e6d734279871.svg",
+    "static/media/icons.woff": "/faq-generator-app/static/media/icons.39f1f44a82f27245c546.woff",
+    "static/media/icons.ttf": "/faq-generator-app/static/media/icons.2a33a9c8afbef2ea3d9d.ttf",
     "index.html": "/faq-generator-app/index.html",
-    "static/media/cursor-disabled.svg": "/faq-generator-app/static/media/cursor-disabled.e05a22bdf820cabc31a0.svg",
-    "static/media/cursor-hand.svg": "/faq-generator-app/static/media/cursor-hand.4aacbc474b854d388e6b.svg",
-    "static/media/cursor-edit.svg": "/faq-generator-app/static/media/cursor-edit.1450258fe600f7c4e363.svg",
-    "static/media/cursor.svg": "/faq-generator-app/static/media/cursor.ad32d1e63858be3f6918.svg",
-    "main.c114f772.css.map": "/faq-generator-app/static/css/main.c114f772.css.map",
-    "main.e285ec94.js.map": "/faq-generator-app/static/js/main.e285ec94.js.map",
+    "static/media/cursor-disabled.svg": "/faq-generator-app/static/media/cursor-disabled.6761320ae3a13087edbf.svg",
+    "static/media/cursor-hand.svg": "/faq-generator-app/static/media/cursor-hand.dfece3cc767d66729855.svg",
+    "static/media/cursor-edit.svg": "/faq-generator-app/static/media/cursor-edit.bd9a4b07a66fa54c11e1.svg",
+    "static/media/cursor.svg": "/faq-generator-app/static/media/cursor.f6d3ff1228e89e2803c4.svg",
+    "main.1133d80c.css.map": "/faq-generator-app/static/css/main.1133d80c.css.map",
+    "main.3c6df50c.js.map": "/faq-generator-app/static/js/main.3c6df50c.js.map",
     "787.024c9544.chunk.js.map": "/faq-generator-app/static/js/787.024c9544.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.c114f772.css",
-    "static/js/main.e285ec94.js"
+    "static/css/main.1133d80c.css",
+    "static/js/main.3c6df50c.js"
   ]
 }
